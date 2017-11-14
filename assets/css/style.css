@@ -1,6 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Vollkorn+SC');
+
 body{
     background-image: url(../images/background.jpg);
 
+}
+
+.numberscore,
+.winslosses{
+    font-family: 'Orbitron', sans-serif;
 }
 
 .img-circle{
@@ -9,6 +17,8 @@ body{
     
 }
 .instructions{
+    font-size: 16px;
+    font-family: 'Vollkorn SC', serif;
     border:3px solid black;
     background-color: rgb(125, 247, 247);
 }

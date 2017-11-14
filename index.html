@@ -30,10 +30,10 @@
         </div>
         <div class="crystals row">
             <div class="crystalscol col-md-6 col-md-offset-3">
-                <img id="blue" src="assets/images/blue.png" alt="blue" class="img-circle">
-                <img id="red" src="assets/images/red.png" alt="red" class="img-circle">
-                <img id="green" src="assets/images/green.png" alt="green" class="img-circle">
-                <img id="yellow" src="assets/images/yellow.png" alt="yellow" class="img-circle">
+                <img id="blue" src="assets/images/blue.png" alt="blue" class="crystals img-circle">
+                <img id="red" src="assets/images/red.png" alt="red" class="crystals img-circle">
+                <img id="green" src="assets/images/green.png" alt="green" class="crystals img-circle">
+                <img id="yellow" src="assets/images/yellow.png" alt="yellow" class="crystals img-circle">
             </div>
         </div>
         <div class="numberscore row">
@@ -41,7 +41,7 @@
                 <div class="randomnumber panel panel-default">
                     <div class="panel-body">
                         <h3>
-                            <span class="value"></span>
+                            <span id="value"></span>
                         </h3>
                     </div>
                     <div class="panel-footer">Number to Match</div>
@@ -59,8 +59,8 @@
         <div class="winslosses row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="well well-lg">
-                    <p id="wins">Wins: </p>
-                    <p id="losses">Losses: </p>
+                    <p id="wins">Wins: <span id="totalwins"></span></p>
+                    <p id="losses">Losses: <span id="totallosses"></span></p>
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script type="text/javascript" src="assets/javascript/game2.js"></script>
 </body>
 
 </html>

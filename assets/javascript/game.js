@@ -1,3 +1,6 @@
+//-----first try at javascript
+
+
 //--------------------------------------Javascript and Jquery for crystal game
 
 //-------------------------------------it equals the total score
@@ -5,24 +8,28 @@
 //-------------------------------------if it is equal then we change win counter
 $(document).ready(function () {
     //-------------------------------------------------------global vars to use 
-    
-    var ranNum = Math.floor(Math.random() * 102)+19;
-    console.log(ranNum);
-    
+
+    var ranNum = Math.floor(Math.random() * 101) + 19;
+$("")
+    var counter;
+
     var wins;
     console.log(wins + "wins");
     var losses;
     console.log(losses + "losses");
-    
-    
+
+
+
+
     //----------------------------------------functions
     newGame();
 
-    //-------------------------------
+
+    //-------------------------------vars for crystals
+
     //-----------------------------------------------onclick for crystals
-    $("#blue").on("click", function () {
-        console.log(this.value);
-    })
+    ;
+
     $("#red").on("click", function () {
         console.log(this.value);
     })
@@ -47,10 +54,7 @@ $(document).ready(function () {
         }
         var numberToGuess = randomNumber(19, 120);
         $(".value").text(numberToGuess);
-
-        
     }
-
 
     console.log(newGame());
 

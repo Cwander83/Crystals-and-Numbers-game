@@ -1,46 +1,40 @@
 //--------javascript and jquery for crystal game
-//--------tells when to run the javascript
-//var crystalMin = 1;
-//var crystalMax = 11;
+
+//------------random numbers for the crystals
 var crystals = [];
 for (var i = 0; i < 4; i++) {
   crystals.push(Math.floor(Math.random() * 11 + 1));
 
 }
-
+//--------tells when to run the javascript
 $(document).ready(function () {
   //---random number 
   var random = Math.floor(Math.random() * 101 + 19);
   //---------------using method .text to send random number 
   $("#value").text(random);
-  //------------random numbers for the crystals
-  //var crystalnumbers1= Math.floor(Math.random()*crystalMax+crystalMin);
-  //var crystalnumbers2= Math.floor(Math.random()*11+1);
-  //var crystalnumbers3= Math.floor(Math.random()*11+1);
-  //var crystalnumbers4= Math.floor(Math.random()*11+1);
   //------------------global vars
   var gamertotal = 0;
   var wins = 0;
   var losses = 0;
-//------------fadeout for crystals on click
-  $("#red").on("click",function(){
-    $(this).fadeOut(30, function(){
-        $(this).fadeIn(30);
+  //------------fadeout for crystals on click
+  $("#red").on("click", function () {
+    $(this).fadeOut(30, function () {
+      $(this).fadeIn(30);
     });
   });
-  $("#blue").on("click",function(){
-    $(this).fadeOut(30, function(){
-        $(this).fadeIn(30);
+  $("#blue").on("click", function () {
+    $(this).fadeOut(30, function () {
+      $(this).fadeIn(30);
     });
   });
-  $("#green").on("click",function(){
-    $(this).fadeOut(30, function(){
-        $(this).fadeIn(30);
+  $("#green").on("click", function () {
+    $(this).fadeOut(30, function () {
+      $(this).fadeIn(30);
     });
   });
-  $("#yellow").on("click",function(){
-    $(this).fadeOut(30, function(){
-        $(this).fadeIn(30);
+  $("#yellow").on("click", function () {
+    $(this).fadeOut(30, function () {
+      $(this).fadeIn(30);
     });
   });
   //--------------using method .text for wins and losses
@@ -55,10 +49,6 @@ $(document).ready(function () {
     for (var i = 0; i < 4; i++) {
       crystals.push(Math.floor(Math.random() * 11 + 1));
     }
-    //crystalnumbers1= Math.floor(Math.random()*11+1);
-    //crystalnumbers2= Math.floor(Math.random()*11+1);
-    //crystalnumbers3= Math.floor(Math.random()*11+1);
-    //crystalnumbers4= Math.floor(Math.random()*11+1);
     gamertotal = 0;
     $("#yourscore").text(gamertotal);
   }
@@ -88,7 +78,7 @@ $(document).ready(function () {
     } else if (gamertotal > random) {
       gameLost();
     }
-  })
+  });
   //-----------red crystal 
   $("#red").on("click", function () {
     gamertotal = gamertotal + crystals[1];
@@ -122,4 +112,28 @@ $(document).ready(function () {
       gameLost();
     }
   });
+
+  //function imgFunction(crystalkey){
+  //  return function(){
+  //  gamertotal = gamertotal + crystals[crystalkey];
+  // the clg that tells the new total 
+  // console.log("New usertotal= " + gamertotal);
+  //$("#yourscore").text(gamertotal);
+  //if (gamertotal == random) {
+  //  gameWon();
+  // } else if (gamertotal > random) {
+  //  gameLost();
+  // }
+
+  //}
+  //}
+  //imgFunction()
+
+
+
+  // $("#crystals").forEach( function imgFunction(){
+  //  famertotal = gamertotal + crystals;
+  //  console.log("new score: " + gamertotal);
+
+  //});
 });

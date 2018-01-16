@@ -41,7 +41,7 @@ $(document).ready(function () {
   $("#totalwins").text(wins);
   $("#totallosses").text(losses);
   //---------------start game and reset for game
-  function reset() {
+  reset = () => {
     random = Math.floor(Math.random() * 101 + 19);
     console.log(random);
     $("#value").text(random);
@@ -53,14 +53,14 @@ $(document).ready(function () {
     $("#yourscore").text(gamertotal);
   }
   //--------function for when you match numbers and win
-  function gameWon() {
+  gameWon = () => {
     alert("You're a winner!");
     wins++;
     $("#totalwins").text(wins);
     reset();
   }
   //---------------function for when you go over and lose
-  function gameLost() {
+  gameLost = () => {
     alert("Nope! no crystals for you!!");
     losses++;
     $("#totallosses").text(losses);
@@ -68,7 +68,7 @@ $(document).ready(function () {
   }
   //------------on click and crystals number 
   //----------the blue crystal
-  $("#blue").on("click", function () {
+  $("#blue", "#red", "#green", "#yellow").on("click", function () {
     gamertotal = gamertotal + crystals[0];
     // the clg that tells the new total 
     console.log("New usertotal= " + gamertotal);
@@ -79,7 +79,7 @@ $(document).ready(function () {
       gameLost();
     }
   });
-  //-----------red crystal 
+  // //-----------red crystal 
   $("#red").on("click", function () {
     gamertotal = gamertotal + crystals[1];
     console.log("New usertotal= " + gamertotal);
